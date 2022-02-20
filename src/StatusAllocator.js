@@ -45,13 +45,14 @@ let HeartReTP = false;
 let Waitlisted = false;
 let TP_Candidate = false;
 
-let status = 0
+
 
 
 
 
 function getStatus(MSCD_support, VA_ECMO, ND_BIVAD, Arrythmia, IABP, Impella, TandemHeart, CentriMag, RVAD, ND_LVAD, CHM, LVAD, TAH, D_BIVAD, VA_ECMO_7D, Hemolysis, PurmpThrombosis, RightHeartFailure, DeviceInfection, AortInsuff, ICD_Shock, MucosalBleeding, D_LVAD, INO_wo_Hemo, CongHD, AmylHypReCard, HeartReTP, Waitlisted, TP_Candidate) {
 
+    let status = 0
 
     switch(MSCD_support) {
 
