@@ -3,14 +3,27 @@ import './App.css';
 import Calculator from './Calculator';
 import Checklist from './Checklist';
 import SignIn from './SignIn'
+import Navbar from './Navbar';
+
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <Checklist>
-        </Checklist>
-      </header>
+      <Router>
+      <Navbar />
+      <Switch>
+        <Route exact path="/">
+          <SignIn />
+        </Route>
+        <Route path="/calculator">
+          <Calculator />
+        </Route>
+        <Route path="/checklist">
+          <Checklist />
+        </Route>
+        </Switch>
+      </Router>
     </div>
   );
 }
