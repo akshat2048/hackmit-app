@@ -1,5 +1,5 @@
 import { createSlice } from '@reduxjs/toolkit'
-import StatusAllocation from '../../StatusAllocation'
+import StatusAllocatorWrapper from '../../StatusAllocation';
 
 export const ChecklistSlice = createSlice({
   name: 'counter',
@@ -23,51 +23,51 @@ export const ChecklistSlice = createSlice({
   reducers: {
     CheckListChangeAdmitted: (state, action) => {
         state.admitted = action.payload
-        state.status = StatusAllocation(state)
+        state.status = StatusAllocatorWrapper(state)
     },
     CheckListChangeCardiogenicShock: (state, action) => {
         state.cardiogenicShock = action.payload
-        state.status = StatusAllocation(state)
+        state.status = StatusAllocatorWrapper(state)
     },
     CheckListChangeVA_ECMO: (state, action) => {
         state.primaryMechanicalCirculatorySupportDevices.VA_ECMO = action.payload
-        state.status = StatusAllocation(state)
+        state.status = StatusAllocatorWrapper(state)
     }, 
     CheckListChangeDischargeableVAD: (state, action) => {
         state.primaryMechanicalCirculatorySupportDevices.DischargeableVAD = action.payload
-        state.status = StatusAllocation(state)
+        state.status = StatusAllocatorWrapper(state)
     },
     CheckListChangeNonDischargeableVAD: (state, action) => {
         state.primaryMechanicalCirculatorySupportDevices.NonDischargeableVAD = action.payload
-        state.status = StatusAllocation(state)
+        state.status = StatusAllocatorWrapper(state)
     },
     CheckListChangePercutaneousDevice: (state, action) => {
         state.primaryMechanicalCirculatorySupportDevices.PercutaneousDevice = action.payload
-        state.status = StatusAllocation(state)
+        state.status = StatusAllocatorWrapper(state)
     },
     CheckListChangeTAH: (state, action) => {
         state.primaryMechanicalCirculatorySupportDevices.TAH = action.payload
-        state.status = StatusAllocation(state)
+        state.status = StatusAllocatorWrapper(state)
     },
     CheckListChangeIABP: (state, action) => {
         state.primaryMechanicalCirculatorySupportDevices.IABP = action.payload
-        state.status = StatusAllocation(state)
+        state.status = StatusAllocatorWrapper(state)
     },
     CheckListChangeRequiresTimeSpentAtPreviousStatus: (state, action) => {
         state.RequiresTimeSpentAtPreviousStatus = action.payload
-        state.status = StatusAllocation(state)
+        state.status = StatusAllocatorWrapper(state)
     },
     CheckListChangeUseOfInotropes: (state, action) => {
         state.UseOfInotropes = action.payload
-        state.status = StatusAllocation(state)
+        state.status = StatusAllocatorWrapper(state)
     },
     CheckListChangeVTachNotVFib: (state, action) => {
         state.VTachNotVFib = action.payload
-        state.status = StatusAllocation(state)
+        state.status = StatusAllocatorWrapper(state)
     },
     CheckListChangeEligibleForExtension: (state, action) => {
         state.EligibleForExtension = action.payload
-        state.status = StatusAllocation(state)
+        state.status = StatusAllocatorWrapper(state)
     },
   },
 })
