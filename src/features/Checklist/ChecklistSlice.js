@@ -6,6 +6,7 @@ export const ChecklistSlice = createSlice({
     initialState: {
         //define support type
         MSCD_support: '',
+        status: 6,
 
         //TEMPORARY SUPPORT
         VA_ECMO: false,
@@ -45,6 +46,10 @@ export const ChecklistSlice = createSlice({
 
     },
     reducers: {
+        CheckListChangeStatus(state, action) {
+            state.status = action.payload;
+            state.status = StatusAllocatorWrapper(state);
+        },
         CheckListChangeMSCD_support(state, action) {
             state.MSCD_support = action.payload;
             state.status = StatusAllocatorWrapper.getStatus(state);
@@ -165,8 +170,8 @@ export const ChecklistSlice = createSlice({
 })
 
 // Action creators are generated for each case reducer function
-export const { CheckListChangeMSCD_support, CheckListChangeVA_ECMO, } = ChecklistSlice.actions
+//export const { CheckListChangeMSCD_support, CheckListChangeVA_ECMO, } = ChecklistSlice.actions
 
-export const { CheckListMCSD_support, CheckListVA_ECMO, CheckListChangeND_BIVAD, CheckListChangeArrythmia, CheckListChangeIABP, CheckListChangeImpella, CheckListChangeTandemHeart, CheckListChangeCentriMag, CheckListChangeRVAD, CheckListChangeND_LVAD, CheckListChangeCHM, CheckListChangeLVAD, CheckListChangeTAH, CheckListChangeD_BIVAD, CheckListChangeVA_ECMO_7D, CheckListChangeHemolysis, CheckListChangePurmpThrombosis, CheckListChangeRightHeartFailure, CheckListChangeDeviceInfection, CheckListChangeAortInsuff, CheckListChangeICD_Shock, CheckListChangeMucosalBleeding, CheckListChangeD_LVAD, CheckListChangeINO_wo_Hemo, CheckListChangeCongHD, CheckListChangeAmylHypReCard, CheckListChangeHeartReTP, CheckListChangeWaitlisted, CheckListChangeTP_Candidate } = ChecklistSlice.actions
+export const { CheckListChangeStatus, CheckListChangeMCSD_support, CheckListChangeVA_ECMO, CheckListChangeND_BIVAD, CheckListChangeArrythmia, CheckListChangeIABP, CheckListChangeImpella, CheckListChangeTandemHeart, CheckListChangeCentriMag, CheckListChangeRVAD, CheckListChangeND_LVAD, CheckListChangeCHM, CheckListChangeLVAD, CheckListChangeTAH, CheckListChangeD_BIVAD, CheckListChangeVA_ECMO_7D, CheckListChangeHemolysis, CheckListChangePurmpThrombosis, CheckListChangeRightHeartFailure, CheckListChangeDeviceInfection, CheckListChangeAortInsuff, CheckListChangeICD_Shock, CheckListChangeMucosalBleeding, CheckListChangeD_LVAD, CheckListChangeINO_wo_Hemo, CheckListChangeCongHD, CheckListChangeAmylHypReCard, CheckListChangeHeartReTP, CheckListChangeWaitlisted, CheckListChangeTP_Candidate } = ChecklistSlice.actions
 
 export default ChecklistSlice.reducer
