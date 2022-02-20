@@ -21,7 +21,7 @@ function Checklist() {
     return (
             <div>
 
-                <Stack direction='column' spacing={12}>
+                <Stack direction='row' spacing={12}>
                     <div>
                         <FormGroup>
                             <Accordion>
@@ -30,18 +30,13 @@ function Checklist() {
                                     Durable Support
                                 </Typography>
                             </AccordionSummary>
-                            <AccordionDetails>
-                                <FormControlLabel control={<Checkbox />} label="LVAD" />
+                            <AccordionDetails align="left" align="left" align="left"><FormControlLabel control={<Checkbox />} label="LVAD" />
                             </AccordionDetails>
-                            <AccordionDetails>
-                                <FormControlLabel control={<Checkbox />} label="TAH" />
+                            <AccordionDetails align="left" align="left" align="left"><FormControlLabel control={<Checkbox />} label="TAH" />
                             </AccordionDetails>
-                            <AccordionDetails>
-                                <FormControlLabel control={<Checkbox />} label="D BIVAD" />
+                            <AccordionDetails align="left" align="left" align="left" align="left"><FormControlLabel control={<Checkbox />} label="D BIVAD" />
                             </AccordionDetails>
-                            <AccordionDetails>
-                                <FormControlLabel control={<Checkbox />} label="VA ECMO 7D" />
-                            </AccordionDetails>
+                            <AccordionDetails align="left" align="left"><FormControlLabel control={<Checkbox />} label="VA ECMO 7D" /></AccordionDetails>
                             </Accordion>
                         </FormGroup>
                         <FormGroup>
@@ -51,25 +46,25 @@ function Checklist() {
                                     LVAD
                                 </Typography>
                             </AccordionSummary>
-                            <AccordionDetails>
+                            <AccordionDetails align="left" align="left">
                                 <FormControlLabel control={<Checkbox />} label="Hemolysis" />
                             </AccordionDetails>
-                            <AccordionDetails>
+                            <AccordionDetails align="left" align="left">
                                 <FormControlLabel control={<Checkbox />} label="PurmpThyrombosis" />
                             </AccordionDetails>
-                            <AccordionDetails>
+                            <AccordionDetails align="left" align="left">
                                 <FormControlLabel control={<Checkbox />} label="RightHeartFailure" />
                             </AccordionDetails>
-                            <AccordionDetails>
+                            <AccordionDetails align="left" align="left">
                                 <FormControlLabel control={<Checkbox />} label="DeviceInfection" />
                             </AccordionDetails>
-                            <AccordionDetails>
+                            <AccordionDetails align="left" align="left">
                                 <FormControlLabel control={<Checkbox />} label="AortInsuff" />
                             </AccordionDetails>
-                            <AccordionDetails>
+                            <AccordionDetails align="left" align="left">
                                 <FormControlLabel control={<Checkbox />} label="ICD Shock" />
                             </AccordionDetails>
-                            <AccordionDetails>
+                            <AccordionDetails align="left" align="left">
                                 <FormControlLabel control={<Checkbox />} label="MucosalBleeding" />
                             </AccordionDetails>
                             </Accordion>
@@ -79,51 +74,55 @@ function Checklist() {
                     </div>
                     <div>
                         <FormGroup>
+                        <Accordion>
                             <AccordionSummary expandicon={<IoIosAddCircleOutline />}>
                                 <Typography style={{ fontWeight: 600 }}>
                                     MCSD Support
                                 </Typography>
                             </AccordionSummary>
-                            <AccordionDetails>
-                                <FormControlLabel control={<Checkbox />} label="Admitted" />
-                            </AccordionDetails>
-                            <AccordionDetails>
+                            <AccordionDetails align="left" align="left"><FormControlLabel control={<Checkbox />} label="Admitted" /></AccordionDetails>
+                            <AccordionDetails align="left" align="left">
                                 <FormControlLabel control={<Checkbox />} label="Outpatient" />
                             </AccordionDetails>
+                            </Accordion>
                         </FormGroup>
                         <FormGroup>
+                            <Accordion>
                             <AccordionSummary expandicon={<IoIosAddCircleOutline />}>
                                 <Typography style={{ fontWeight: 600 }}>
                                     Other Support
                                 </Typography>
                             </AccordionSummary>
-                            <AccordionDetails><FormControlLabel control={<Checkbox />} label="D BIDVAD" /></AccordionDetails>
-                            <AccordionDetails><FormControlLabel control={<Checkbox />} label="INO wo Hemo" /></AccordionDetails>
-                            <AccordionDetails><FormControlLabel control={<Checkbox />} label="CongHD" /></AccordionDetails>
-                            <AccordionDetails><FormControlLabel control={<Checkbox />} label="AmylHypReCard" /></AccordionDetails>
-                            <AccordionDetails><FormControlLabel control={<Checkbox />} label="HeartReTP" /></AccordionDetails>
-                            <AccordionDetails><FormControlLabel control={<Checkbox />} label="Waitlisted" /></AccordionDetails>
-                            <AccordionDetails><FormControlLabel control={<Checkbox />} label="TP Candidate" /></AccordionDetails>
+                            <AccordionDetails align="left" align="left"><FormControlLabel control={<Checkbox />} label="D BIDVAD" /></AccordionDetails>
+                            <AccordionDetails align="left" align="left"><FormControlLabel control={<Checkbox />} label="INO wo Hemo" /></AccordionDetails>
+                            <AccordionDetails align="left" align="left"><FormControlLabel control={<Checkbox />} label="CongHD" /></AccordionDetails>
+                            <AccordionDetails align="left" align="left"><FormControlLabel control={<Checkbox />} label="AmylHypReCard" /></AccordionDetails>
+                            <AccordionDetails align="left" align="left"><FormControlLabel control={<Checkbox />} label="HeartReTP" /></AccordionDetails>
+                            <AccordionDetails align="left" align="left"><FormControlLabel control={<Checkbox />} label="Waitlisted" /></AccordionDetails>
+                            <AccordionDetails align="left" align="left"><FormControlLabel control={<Checkbox />} label="TP Candidate" /></AccordionDetails>
+                            </Accordion>
                         </FormGroup>
                     </div>
                     <div>
                         <hr></hr>
                         <FormGroup>
+                            <Accordion>
                             <AccordionSummary expandicon={<IoIosAddCircleOutline />}>
                                 <Typography style={{ fontWeight: 600 }}>
                                     Temporary Support
                                 </Typography>
                             </AccordionSummary>
-                            <AccordionDetails><FormControlLabel control={<Checkbox />} label="VA ECMO" /></AccordionDetails>
-                            <AccordionDetails><FormControlLabel control={<Checkbox />} label="ND BIVAD" /></AccordionDetails>
-                            <AccordionDetails><FormControlLabel control={<Checkbox />} label="Arrythmia" /></AccordionDetails>
-                            <AccordionDetails><FormControlLabel control={<Checkbox />} label="IABP" /></AccordionDetails>
-                            <AccordionDetails><FormControlLabel control={<Checkbox />} label="Impella" /></AccordionDetails>
-                            <AccordionDetails><FormControlLabel control={<Checkbox />} label="TandemHeart" /></AccordionDetails>
-                            <AccordionDetails><FormControlLabel control={<Checkbox />} label="CentriMag" /></AccordionDetails>
-                            <AccordionDetails><FormControlLabel control={<Checkbox />} label="RVAD" /></AccordionDetails>
-                            <AccordionDetails><FormControlLabel control={<Checkbox />} label="CHM" /></AccordionDetails>
-                            <AccordionDetails><FormControlLabel control={<Checkbox />} label="ND LVAD" /></AccordionDetails>
+                            <AccordionDetails align="left" align="left"><FormControlLabel control={<Checkbox />} label="VA ECMO" /></AccordionDetails>
+                            <AccordionDetails align="left" align="left"><FormControlLabel control={<Checkbox />} label="ND BIVAD" /></AccordionDetails>
+                            <AccordionDetails align="left" align="left"><FormControlLabel control={<Checkbox />} label="Arrythmia" /></AccordionDetails>
+                            <AccordionDetails align="left" align="left"><FormControlLabel control={<Checkbox />} label="IABP" /></AccordionDetails>
+                            <AccordionDetails align="left" align="left"><FormControlLabel control={<Checkbox />} label="Impella" /></AccordionDetails>
+                            <AccordionDetails align="left" align="left"><FormControlLabel control={<Checkbox />} label="TandemHeart" /></AccordionDetails>
+                            <AccordionDetails align="left" align="left"><FormControlLabel control={<Checkbox />} label="CentriMag" /></AccordionDetails>
+                            <AccordionDetails align="left" align="left"><FormControlLabel control={<Checkbox />} label="RVAD" /></AccordionDetails>
+                            <AccordionDetails align="left" align="left"><FormControlLabel control={<Checkbox />} label="CHM" /></AccordionDetails>
+                            <AccordionDetails align="left" align="left"><FormControlLabel control={<Checkbox />} label="ND LVAD" /></AccordionDetails>
+                            </Accordion>
                         </FormGroup>
                         <hr>
                         </hr>
