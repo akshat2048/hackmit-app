@@ -6,6 +6,7 @@ export const ChecklistSlice = createSlice({
     initialState: {
         //define support type
         MSCD_support: '',
+        status: 6,
 
         //TEMPORARY SUPPORT
         VA_ECMO: false,
@@ -45,6 +46,10 @@ export const ChecklistSlice = createSlice({
 
     },
     reducers: {
+        CheckListChangeStatus(state, action) {
+            state.status = action.payload;
+            state.status = StatusAllocatorWrapper(state);
+        },
         CheckListChangeMSCD_support(state, action) {
             state.MSCD_support = action.payload;
             state.status = StatusAllocatorWrapper.getStatus(state);
