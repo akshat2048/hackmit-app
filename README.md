@@ -43,6 +43,6 @@ You can learn more in the [Create React App documentation](https://facebook.gith
 
 To learn React, check out the [React documentation](https://reactjs.org/).
 
-## Status Docs
+## Status Documentation
 
 https://optn.transplant.hrsa.gov/media/2413/adult_heart_criteria.pdf 
