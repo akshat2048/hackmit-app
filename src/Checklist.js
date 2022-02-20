@@ -7,6 +7,8 @@ import { useSelector, useDispatch } from 'react-redux';
 import { LVchangeWeight, LVchangeHeight, LVchangeGender } from './features/LV/LVSlice';
 import { RVchangeAge, RVchangeGender, RVchangeHeight, RVchangeWeight } from './features/RV/RVSlice';
 import { useState } from 'react';
+import {CheckListChangeStatus, CheckListChangeMCSD_support, CheckListChangeVA_ECMO, CheckListChangeND_BIVAD, CheckListChangeArrythmia, CheckListChangeIABP, CheckListChangeImpella, CheckListChangeTandemHeart, CheckListChangeCentriMag, CheckListChangeRVAD, CheckListChangeND_LVAD, CheckListChangeCHM, CheckListChangeLVAD, CheckListChangeTAH, CheckListChangeD_BIVAD, CheckListChangeVA_ECMO_7D, CheckListChangeHemolysis, CheckListChangePurmpThrombosis, CheckListChangeRightHeartFailure, CheckListChangeDeviceInfection, CheckListChangeAortInsuff, CheckListChangeICD_Shock, CheckListChangeMucosalBleeding, CheckListChangeD_LVAD, CheckListChangeINO_wo_Hemo, CheckListChangeCongHD, CheckListChangeAmylHypReCard, CheckListChangeHeartReTP, CheckListChangeWaitlisted, CheckListChangeTP_Candidate } from './features/Checklist/ChecklistSlice';
+
 
 const Item = styled(Paper)(({ theme }) => ({
     backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
@@ -17,6 +19,8 @@ const Item = styled(Paper)(({ theme }) => ({
 }));
 
 function Checklist() {
+
+    const dispatch = useDispatch();
 
     return (
             <div>
@@ -31,7 +35,9 @@ function Checklist() {
                                     Temporary Support
                                 </Typography>
                             </AccordionSummary>
-                            <AccordionDetails align="left" align="left"><FormControlLabel control={<Checkbox />} label="VA ECMO" /></AccordionDetails>
+                            <AccordionDetails align="left" align="left"><FormControlLabel onChange={(event) => {
+                                dispatch(CheckListChangeVA_ECMO(event.target.checked));
+                            }} control={<Checkbox />} label="VA ECMO" /></AccordionDetails>
                             <AccordionDetails align="left" align="left"><FormControlLabel control={<Checkbox />} label="Non-dischargeable BIVAD" /></AccordionDetails>
                             <AccordionDetails align="left" align="left"><FormControlLabel control={<Checkbox />} label="Arrythmia" /></AccordionDetails>
                             <AccordionDetails align="left" align="left"><FormControlLabel control={<Checkbox />} label="Intra-Aortic Balloon Pump" /></AccordionDetails>

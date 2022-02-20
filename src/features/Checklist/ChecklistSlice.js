@@ -1,5 +1,5 @@
 import { createSlice } from '@reduxjs/toolkit'
-import StatusAllocatorWrapper from '../../StatusAllocation';
+import StatusAllocatorWrapper from '../../StatusAllocatorWrapper';
 
 export const ChecklistSlice = createSlice({
     name: 'counter',
