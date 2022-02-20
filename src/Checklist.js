@@ -22,6 +22,8 @@ function Checklist() {
 
     const dispatch = useDispatch();
 
+    const status = useSelector(state => state.Checklist.status);
+
     return (
             <div>
 
@@ -128,6 +130,9 @@ function Checklist() {
                    
 
                 </Stack>
+                <Typography>
+                    {status}
+                </Typography>
             </div>
     )
 }
