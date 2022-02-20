@@ -45,4 +45,4 @@ To learn React, check out the [React documentation](https://reactjs.org/).
 
 ## Status Documentation
 
-https://optn.transplant.hrsa.gov/media/2413/adult_heart_criteria.pdf 
+Use the (Heart Criteria PDF)[https://optn.transplant.hrsa.gov/media/2413/adult_heart_criteria.pdf] 
