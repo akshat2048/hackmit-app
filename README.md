@@ -45,4 +45,7 @@ To learn React, check out the [React documentation](https://reactjs.org/).
 
 ## Status Documentation
 
-Use the (Heart Criteria PDF)[https://optn.transplant.hrsa.gov/media/2413/adult_heart_criteria.pdf] 
+*When compared to patients without lung disease, risk of ... heart disease was increased by [up to] 75%* [Digrande '19](https://www.ajmc.com/view/common-lung-diseases-associated-with-cardiovascular-risk)
+[Heart Criteria PDF](https://optn.transplant.hrsa.gov/media/2413/adult_heart_criteria.pdf)
+
+
