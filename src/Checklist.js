@@ -110,8 +110,8 @@ function Checklist() {
                             <AccordionDetails align="left" align="left"><FormControlLabel control={<Checkbox />} label="Dischargeable LVAD" /></AccordionDetails>
                             <AccordionDetails align="left" align="left"><FormControlLabel control={<Checkbox />} label="Inotropes without Hemodynamic Monitoring" /></AccordionDetails>
                             <AccordionDetails align="left" align="left"><FormControlLabel control={<Checkbox />} label="Congenital Heart Disease" /></AccordionDetails>
-                            <AccordionDetails align="left" align="left"><FormControlLabel control={<Checkbox />} label="AmylHypReCard" /></AccordionDetails>
                             <AccordionDetails align="left" align="left"><FormControlLabel control={<Checkbox />} label="Cardiomyopathy" /></AccordionDetails>
+                            <AccordionDetails align="left" align="left"><FormControlLabel control={<Checkbox />} label="Heart Re-transplant" /></AccordionDetails>
                             <AccordionDetails align="left" align="left"><FormControlLabel control={<Checkbox />} label="On Waitlist for Organ Transplant" /></AccordionDetails>
                             <AccordionDetails align="left" align="left"><FormControlLabel control={<Checkbox />} label="Candidate for Transplant" /></AccordionDetails>
                             </Accordion>
