@@ -1,8 +1,10 @@
 
-//
+//define support type
 let MSCD_support = '';
 
-//TEMPORARY SUPPORT subcategories
+
+
+//TEMPORARY SUPPORT
 let VA_ECMO = false;
 let ND_BIVAD = false;
 let Arrythmia = false;
@@ -12,12 +14,16 @@ let TandemHeart = false;
 let CentriMag = false;
 let RVAD = false;
 let CHM = false;
-
 let ND_LVAD = false;
+
+
 
 
 //DURABLE SUPPORT
 let LVAD = false;
+let TAH = false;
+let D_BIVAD = false;
+let VA_ECMO_7D = false;
 
 //LVAD Subcategories
 let Hemolysis = false;
@@ -26,10 +32,19 @@ let RightHeartFailure = false;
 let DeviceInfection = false;
 let AortInsuff = false;
 let ICD_Shock = false;
+let MucosalBleeding = false;
 
-//other durable support
-let TAH = false;
-let D_BIDVAD = false;
+
+
+//OTHER SUPPORT
+let D_LVAD = false;
+let INO_wo_Hemo = false;
+let CongHD = false;
+let AmylHypReCard = false;
+let HeartReTP = false;
+let Waitlisted = false;
+let TP_Candidate = false;
+
 
 
 
