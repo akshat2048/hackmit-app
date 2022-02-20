@@ -32,15 +32,15 @@ function Checklist() {
                                 </Typography>
                             </AccordionSummary>
                             <AccordionDetails align="left" align="left"><FormControlLabel control={<Checkbox />} label="VA ECMO" /></AccordionDetails>
-                            <AccordionDetails align="left" align="left"><FormControlLabel control={<Checkbox />} label="ND BIVAD" /></AccordionDetails>
+                            <AccordionDetails align="left" align="left"><FormControlLabel control={<Checkbox />} label="Non-dischargeable BIVAD" /></AccordionDetails>
                             <AccordionDetails align="left" align="left"><FormControlLabel control={<Checkbox />} label="Arrythmia" /></AccordionDetails>
-                            <AccordionDetails align="left" align="left"><FormControlLabel control={<Checkbox />} label="IABP" /></AccordionDetails>
+                            <AccordionDetails align="left" align="left"><FormControlLabel control={<Checkbox />} label="Intra-Aortic Balloon Pump" /></AccordionDetails>
                             <AccordionDetails align="left" align="left"><FormControlLabel control={<Checkbox />} label="Impella" /></AccordionDetails>
-                            <AccordionDetails align="left" align="left"><FormControlLabel control={<Checkbox />} label="TandemHeart" /></AccordionDetails>
+                            <AccordionDetails align="left" align="left"><FormControlLabel control={<Checkbox />} label="Tandem Heart" /></AccordionDetails>
                             <AccordionDetails align="left" align="left"><FormControlLabel control={<Checkbox />} label="CentriMag" /></AccordionDetails>
                             <AccordionDetails align="left" align="left"><FormControlLabel control={<Checkbox />} label="RVAD" /></AccordionDetails>
-                            <AccordionDetails align="left" align="left"><FormControlLabel control={<Checkbox />} label="CHM" /></AccordionDetails>
-                            <AccordionDetails align="left" align="left"><FormControlLabel control={<Checkbox />} label="ND LVAD" /></AccordionDetails>
+                            <AccordionDetails align="left" align="left"><FormControlLabel control={<Checkbox />} label="Continuous Hemodynamic Monitoring" /></AccordionDetails>
+                            <AccordionDetails align="left" align="left"><FormControlLabel control={<Checkbox />} label="Non-dischargeable LVAD" /></AccordionDetails>
                             </Accordion>
                         </FormGroup>
                         <hr>
@@ -56,38 +56,38 @@ function Checklist() {
                                     Durable
                                 </Typography>
                             </AccordionSummary>
-                            <AccordionDetails align="left" align="left" align="left"><FormControlLabel control={<Checkbox />} label="LVAD" />
+                            {/* <AccordionDetails align="left" align="left" align="left"><FormControlLabel control={<Checkbox />} label="LVAD" />
+                            </AccordionDetails> */}
+                            <AccordionDetails align="left" align="left" align="left"><FormControlLabel control={<Checkbox />} label="Total Abdominal Hysterectomy" />
                             </AccordionDetails>
-                            <AccordionDetails align="left" align="left" align="left"><FormControlLabel control={<Checkbox />} label="TAH" />
+                            <AccordionDetails align="left" align="left" align="left" align="left"><FormControlLabel control={<Checkbox />} label="Dischargeable BIVAD" />
                             </AccordionDetails>
-                            <AccordionDetails align="left" align="left" align="left" align="left"><FormControlLabel control={<Checkbox />} label="D BIVAD" />
-                            </AccordionDetails>
-                            <AccordionDetails align="left" align="left"><FormControlLabel control={<Checkbox />} label="VA ECMO 7D" /></AccordionDetails>
+                            <AccordionDetails align="left" align="left"><FormControlLabel control={<Checkbox />} label="VA ECMO sustained 7 Days" /></AccordionDetails>
                             <FormGroup>
                             <Accordion>
                             <AccordionSummary expandicon={<IoIosAddCircleOutline />}>
-                                <FormControlLabel control={<Checkbox />} label="LVAD"></FormControlLabel>
+                                <FormControlLabel control={<Checkbox />} label="LVAD + Complication"></FormControlLabel>
                             </AccordionSummary>
                             <AccordionDetails align="left" align="left">
                                 <FormControlLabel control={<Checkbox />} label="Hemolysis" />
                             </AccordionDetails>
                             <AccordionDetails align="left" align="left">
-                                <FormControlLabel control={<Checkbox />} label="PurmpThyrombosis" />
+                                <FormControlLabel control={<Checkbox />} label="Pump Thrombosis" />
                             </AccordionDetails>
                             <AccordionDetails align="left" align="left">
-                                <FormControlLabel control={<Checkbox />} label="RightHeartFailure" />
+                                <FormControlLabel control={<Checkbox />} label="Right Heart Failure" />
                             </AccordionDetails>
                             <AccordionDetails align="left" align="left">
-                                <FormControlLabel control={<Checkbox />} label="DeviceInfection" />
+                                <FormControlLabel control={<Checkbox />} label="Device Infection" />
                             </AccordionDetails>
                             <AccordionDetails align="left" align="left">
-                                <FormControlLabel control={<Checkbox />} label="AortInsuff" />
+                                <FormControlLabel control={<Checkbox />} label="Aortic Insufficiency" />
                             </AccordionDetails>
                             <AccordionDetails align="left" align="left">
                                 <FormControlLabel control={<Checkbox />} label="ICD Shock" />
                             </AccordionDetails>
                             <AccordionDetails align="left" align="left">
-                                <FormControlLabel control={<Checkbox />} label="MucosalBleeding" />
+                                <FormControlLabel control={<Checkbox />} label="Mucosal Bleeding" />
                             </AccordionDetails>
                             </Accordion>
                         </FormGroup>
@@ -107,13 +107,13 @@ function Checklist() {
                                     Other
                                 </Typography>
                             </AccordionSummary>
-                            <AccordionDetails align="left" align="left"><FormControlLabel control={<Checkbox />} label="D BIDVAD" /></AccordionDetails>
-                            <AccordionDetails align="left" align="left"><FormControlLabel control={<Checkbox />} label="INO wo Hemo" /></AccordionDetails>
-                            <AccordionDetails align="left" align="left"><FormControlLabel control={<Checkbox />} label="CongHD" /></AccordionDetails>
+                            <AccordionDetails align="left" align="left"><FormControlLabel control={<Checkbox />} label="Dischargeable LVAD" /></AccordionDetails>
+                            <AccordionDetails align="left" align="left"><FormControlLabel control={<Checkbox />} label="Inotropes without Hemodynamic Monitoring" /></AccordionDetails>
+                            <AccordionDetails align="left" align="left"><FormControlLabel control={<Checkbox />} label="Congenital Heart Disease" /></AccordionDetails>
                             <AccordionDetails align="left" align="left"><FormControlLabel control={<Checkbox />} label="AmylHypReCard" /></AccordionDetails>
-                            <AccordionDetails align="left" align="left"><FormControlLabel control={<Checkbox />} label="HeartReTP" /></AccordionDetails>
-                            <AccordionDetails align="left" align="left"><FormControlLabel control={<Checkbox />} label="Waitlisted" /></AccordionDetails>
-                            <AccordionDetails align="left" align="left"><FormControlLabel control={<Checkbox />} label="TP Candidate" /></AccordionDetails>
+                            <AccordionDetails align="left" align="left"><FormControlLabel control={<Checkbox />} label="Cardiomyopathy" /></AccordionDetails>
+                            <AccordionDetails align="left" align="left"><FormControlLabel control={<Checkbox />} label="On Waitlist for Organ Transplant" /></AccordionDetails>
+                            <AccordionDetails align="left" align="left"><FormControlLabel control={<Checkbox />} label="Candidate for Transplant" /></AccordionDetails>
                             </Accordion>
                         </FormGroup>
                         <hr></hr>
