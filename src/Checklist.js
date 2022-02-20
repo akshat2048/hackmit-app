@@ -66,11 +66,7 @@ function Checklist() {
                             <FormGroup>
                             <Accordion>
                             <AccordionSummary expandicon={<IoIosAddCircleOutline />}>
-                                <FormControlLabel control={<Checkbox />} label="">
-                                    <Typography style={ {fontWeight: 600} }>
-                                        LVAD
-                                    </Typography>
-                                </FormControlLabel>
+                                <FormControlLabel control={<Checkbox />} label="LVAD"></FormControlLabel>
                             </AccordionSummary>
                             <AccordionDetails align="left" align="left">
                                 <FormControlLabel control={<Checkbox />} label="Hemolysis" />
