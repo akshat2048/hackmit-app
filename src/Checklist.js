@@ -28,7 +28,7 @@ function Checklist() {
                             <Accordion>
                             <AccordionSummary expandicon={<IoIosAddCircleOutline />}>
                                 <Typography style={{ fontWeight: 600 }}>
-                                    Temporary
+                                    Temporary Support
                                 </Typography>
                             </AccordionSummary>
                             <AccordionDetails align="left" align="left"><FormControlLabel control={<Checkbox />} label="VA ECMO" /></AccordionDetails>
@@ -53,7 +53,7 @@ function Checklist() {
                             <Accordion>
                             <AccordionSummary expandicon={<IoIosAddCircleOutline />}>
                                 <Typography style={{ fontWeight: 600 }}>
-                                    Durable
+                                    Durable Support
                                 </Typography>
                             </AccordionSummary>
                             {/* <AccordionDetails align="left" align="left" align="left"><FormControlLabel control={<Checkbox />} label="LVAD" />
@@ -104,7 +104,7 @@ function Checklist() {
                             <Accordion>
                             <AccordionSummary expandicon={<IoIosAddCircleOutline />}>
                                 <Typography style={{ fontWeight: 600 }}>
-                                    Other
+                                    Other Support
                                 </Typography>
                             </AccordionSummary>
                             <AccordionDetails align="left" align="left"><FormControlLabel control={<Checkbox />} label="Dischargeable LVAD" /></AccordionDetails>
