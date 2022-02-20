@@ -1,6 +1,9 @@
 import React from 'react';
+import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
+import Collapse from '@mui/material/Collapse';
 import { IoIosAddCircleOutline } from 'react-icons/io';
-import { Stack, Paper, FormGroup, FormControlLabel, Checkbox, Grid, TextField, Accordion, AccordionSummary, AccordionDetails, Typography, ToggleButtonGroup, ToggleButton, item } from '@mui/material';
+import AccordionDetails from '@mui/material/AccordionDetails';
+import { Stack, Paper, FormGroup, FormControlLabel, Checkbox, Grid, TextField, AccordionSummary, Typography, ToggleButtonGroup, ToggleButton, item } from '@mui/material';
 import { styled } from '@mui/material';
 import { useSelector, useDispatch } from 'react-redux';
 import { LVchangeWeight, LVchangeHeight, LVchangeGender } from './features/LV/LVSlice';
@@ -18,78 +21,119 @@ const Item = styled(Paper)(({ theme }) => ({
 function Checklist() {
 
     return (
+        <Accordion>
         <div>
+            
             <Stack direction='row' spacing={2}>
+            <div>                
+                    <FormGroup>               
+                        <AccordionSummary expandicon= {<ExpandMoreIcon/>}>
+                            <Typography style={{ fontWeight: 600 }}>
+                                Durable Support
+                            </Typography>
+                        </AccordionSummary>
+                        <AccordionDetails>
+                            <FormControlLabel control={<Checkbox />} label="LVAD" />
+                        </AccordionDetails>
+                        <AccordionDetails>
+                            <FormControlLabel control={<Checkbox />} label="TAH" />
+                        </AccordionDetails>
+                        <AccordionDetails>
+                            <FormControlLabel control={<Checkbox />} label="D BIVAD" />
+                        </AccordionDetails>
+                        <AccordionDetails>
+                            <FormControlLabel control={<Checkbox />} label="VA ECMO 7D" />
+                        </AccordionDetails>
+                    </FormGroup>
+                    <FormGroup>
+                    <AccordionSummary expandicon= {<ExpandMoreIcon/>}>
+                            <Typography style={{ fontWeight: 600 }}>
+                                LVAD
+                            </Typography>
+                        </AccordionSummary>
+                        <AccordianDetails>
+                            <FormControlLabel control={<Checkbox />} label="Hemolysis" />
+                        </AccordianDetails>
+                        <AccordianDetails>
+                            <FormControlLabel control={<Checkbox />} label="PurmpThyrombosis" />
+                        </AccordianDetails>
+                        <AccordionDetails>
+                            <FormControlLabel control={<Checkbox />} label="RightHeartFailure" />
+                        </AccordionDetails>
+                        <AccordionDetails>
+                            <FormControlLabel control={<Checkbox />} label="DeviceInfection" />
+                        </AccordionDetails>
+                        <AccordionDetails>
+                            <FormControlLabel control={<Checkbox />} label="AortInsuff" />
+                        </AccordionDetails>
+                        <AccordionDetails>
+                            <FormControlLabel control={<Checkbox />} label="ICD Shock" />
+                        </AccordionDetails>
+                        <AccordionDetails>
+                            <FormControlLabel control={<Checkbox />} label="MucosalBleeding" />
+                        </AccordionDetails>
+                    </FormGroup>
+                    
+                    <hr></hr>
+                </div>
                 <div>
                     <FormGroup>
-                        <Typography>
-                            MSCD Support
-                        </Typography>
-                        <FormControlLabel control={<Checkbox />} label="Admitted" />
-                        <FormControlLabel control={<Checkbox />} label="Outpatient" />
+                    <AccordionSummary expandicon= {<ExpandMoreIcon/>}>
+                            <Typography style={{ fontWeight: 600 }}>
+                                MCSD Support
+                            </Typography>
+                        </AccordionSummary>
+                        <AccordionDetails>
+                            <FormControlLabel control={<Checkbox />} label="Admitted" />
+                        </AccordionDetails>
+                        <AccordionDetails>
+                            <FormControlLabel control={<Checkbox />} label="Outpatient" />
+                        </AccordionDetails>
                     </FormGroup>
+                    <FormGroup>
+                    <AccordionSummary expandicon= {<ExpandMoreIcon/>}>
+                            <Typography style={{ fontWeight: 600 }}>
+                                Other Support
+                            </Typography>
+                        </AccordionSummary>
+                        <AccordionDetails><FormControlLabel control={<Checkbox />} label="D BIDVAD" /></AccordionDetails>
+                        <AccordianDetails><FormControlLabel control={<Checkbox />} label="INO wo Hemo" /></AccordianDetails>
+                        <AccordianDetails><FormControlLabel control={<Checkbox />} label="CongHD" /></AccordianDetails>
+                        <AccordionDetails><FormControlLabel control={<Checkbox />} label="AmylHypReCard" /></AccordionDetails>
+                        <AccordianDetails><FormControlLabel control={<Checkbox />} label="HeartReTP" /></AccordianDetails>
+                        <AccordionDetails><FormControlLabel control={<Checkbox />} label="Waitlisted" /></AccordionDetails>
+                        <AccordionDetails><FormControlLabel control={<Checkbox />} label="TP Candidate" /></AccordionDetails>
+                    </FormGroup>
+                </div>
+                <div>
                     <hr></hr>
                     <FormGroup>
-                        <Typography>
-                            Temporary Support Subcategories
-                        </Typography>
-                        <FormControlLabel control={<Checkbox />} label="VA ECMO" />
-                        <FormControlLabel control={<Checkbox />} label="ND BIVAD" />
-                        <FormControlLabel control={<Checkbox />} label="Arrythmia" />
-                        <FormControlLabel control={<Checkbox />} label="IABP" />
-                        <FormControlLabel control={<Checkbox />} label="Impella" />
-                        <FormControlLabel control={<Checkbox />} label="TandemHeart" />
-                        <FormControlLabel control={<Checkbox />} label="CentriMag" />
-                        <FormControlLabel control={<Checkbox />} label="RVAD" />
-                        <FormControlLabel control={<Checkbox />} label="CHM" />
-                        <FormControlLabel control={<Checkbox />} label="ND LVAD" />
+                    <AccordionSummary expandicon= {<ExpandMoreIcon/>}>
+                            <Typography style={{ fontWeight: 600 }}>
+                                Temporary Support
+                            </Typography>
+                        </AccordionSummary>
+                        <AccordianDetails><FormControlLabel control={<Checkbox />} label="VA ECMO" /></AccordianDetails>
+                        <AccordianDetails><FormControlLabel control={<Checkbox />} label="ND BIVAD" /></AccordianDetails>
+                        <AccordianDetails><FormControlLabel control={<Checkbox />} label="Arrythmia" /></AccordianDetails>
+                        <AccordianDetails><FormControlLabel control={<Checkbox />} label="IABP" /></AccordianDetails>
+                        <AccordianDetails><FormControlLabel control={<Checkbox />} label="Impella" /></AccordianDetails>
+                        <AccordianDetails><FormControlLabel control={<Checkbox />} label="TandemHeart" /></AccordianDetails>
+                        <AccordianDetails><FormControlLabel control={<Checkbox />} label="CentriMag" /></AccordianDetails>
+                        <AccordianDetails><FormControlLabel control={<Checkbox />} label="RVAD" /></AccordianDetails>
+                        <AccordianDetails><FormControlLabel control={<Checkbox />} label="CHM" /></AccordianDetails>
+                        <AccordianDetails><FormControlLabel control={<Checkbox />} label="ND LVAD" /></AccordianDetails>
                     </FormGroup>
                     <hr>
                     </hr>
                 </div>
-                <div>
-                    <FormGroup>
-                        <Typography>
-                            Durable Support
-                        </Typography>
-                        <FormControlLabel control={<Checkbox />} label="LVAD" />
-                        <FormControlLabel control={<Checkbox />} label="TAH" />
-                        <FormControlLabel control={<Checkbox />} label="D BIVAD" />
-                        <FormControlLabel control={<Checkbox />} label="VA ECMO 7D" />
-
-                    </FormGroup>
-                    <FormGroup>
-                        <Typography>
-                            LVAD Subcategories
-                        </Typography>
-                        <FormControlLabel control={<Checkbox />} label="Hemolysis" />
-                        <FormControlLabel control={<Checkbox />} label="PurmpThyrombosis" />
-                        <FormControlLabel control={<Checkbox />} label="RightHeartFailure" />
-                        <FormControlLabel control={<Checkbox />} label="DeviceInfection" />
-                        <FormControlLabel control={<Checkbox />} label="AortInsuff" />
-                        <FormControlLabel control={<Checkbox />} label="ICD Shock" />
-                        <FormControlLabel control={<Checkbox />} label="MucosalBleeding" />
-
-                    </FormGroup>
-                    <FormGroup>
-                        <Typography>
-                            Other Support
-                        </Typography>
-                        <FormControlLabel control={<Checkbox />} label="D BIDVAD" />
-                        <FormControlLabel control={<Checkbox />} label="INO wo Hemo" />
-                        <FormControlLabel control={<Checkbox />} label="CongHD" />
-                        <FormControlLabel control={<Checkbox />} label="AmylHypReCard" />
-                        <FormControlLabel control={<Checkbox />} label="HeartReTP" />
-                        <FormControlLabel control={<Checkbox />} label="Waitlisted" />
-                        <FormControlLabel control={<Checkbox />} label="TP Candidate" />
-                    </FormGroup>
-                    <hr></hr>
-                </div>
+                
             </Stack>
 
 
 
         </div>
+    </Accordion>
     )
 }
 
