@@ -1,5 +1,5 @@
 # CorteXNET
-## A Solution to Decreaseing Medical Access in the Developing World
+## A Solution to Decreasing Medical Access in the Developing World
 
 We created this project with [Create React App](https://github.com/facebook/create-react-app), using the [Redux](https://redux.js.org/) and [Redux Toolkit](https://redux-toolkit.js.org/) template.
 
