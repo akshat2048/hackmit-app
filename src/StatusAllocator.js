@@ -1,4 +1,8 @@
 
+//
+let MSCD_support = '';
+
+//TEMPORARY SUPPORT subcategories
 let VA_ECMO = false;
 let ND_BIVAD = false;
 let Arrythmia = false;
@@ -9,8 +13,23 @@ let CentriMag = false;
 let RVAD = false;
 let CHM = false;
 
-let MSCD_support = '';
 let ND_LVAD = false;
+
+
+//DURABLE SUPPORT
+let LVAD = false;
+
+//LVAD Subcategories
+let Hemolysis = false;
+let PurmpThrombosis = false;
+let RightHeartFailure = false;
+let DeviceInfection = false;
+let AortInsuff = false;
+let ICD_Shock = false;
+
+//other durable support
+let TAH = false;
+let D_BIDVAD = false;
 
 
 
@@ -21,8 +40,8 @@ function getStatus() {
     switch(MSCD_support) {
 
         case('temporary'):
-        // Status 1-2 classification
-        // VA-ECMO, Biventricular SD, Arrythmia
+        // Status 1-2 classification in temporary support
+        // VA-ECMO, Biventricular SD, Arrythmia, etc.
 
             switch(VA_ECMO) {
                 case true:
@@ -88,6 +107,14 @@ function getStatus() {
                     break;
             }
 
+            switch(ND_LVAD) {
+                case true:
+                    return status = 2;
+                    
+                case false:
+                    break;
+            }
+
             switch(CHM) {
                 case true:
                     return status = 2;
@@ -97,14 +124,14 @@ function getStatus() {
             }
 
         case('durable'):
-        // Status 2-3 classification
+        // Status 3-6 classification
 
             // switch() {
                 
             // }
         
-        case('inotrope'):
-        // Status 4-6 classification
+        // case('inotrope'):
+        // // Status 4-6 classification
 
 
 
