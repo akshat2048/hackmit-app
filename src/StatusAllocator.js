@@ -5,16 +5,16 @@ let MSCD_support = '';
 
 
 //TEMPORARY SUPPORT
-let VA_ECMO = false;
-let ND_BIVAD = false;
-let Arrythmia = false;
-let IABP = false;
-let Impella = false;
-let TandemHeart = false;
-let CentriMag = false;
-let RVAD = false;
-let CHM = false;
-let ND_LVAD = false;
+let VA_ECMO = false; // 1
+let ND_BIVAD = false; // 1
+let Arrythmia = false; // 1
+let IABP = false; // 2
+let Impella = false; // 2
+let TandemHeart = false; // 2
+let CentriMag = false; // 2
+let RVAD = false; // 2
+let ND_LVAD = false; // 2
+let CHM = false; // 2
 
 
 
@@ -48,7 +48,7 @@ let TP_Candidate = false;
 
 
 
-function getStatus() {
+function getStatus(MSCD_support, VA_ECMO, ND_BIVAD, Arrythmia, IABP, Impella, TandemHeart, CentriMag, RVAD, ND_LVAD, CHM, LVAD, TAH, D_BIVAD, VA_ECMO_7D, Hemolysis, PurmpThrombosis, RightHeartFailure, DeviceInfection, AortInsuff, ICD_Shock, MucosalBleeding, D_LVAD, INO_wo_Hemo, CongHD, AmylHypReCard, HeartReTP, Waitlisted, TP_Candidate) {
 
     let status = 0;
 
@@ -60,7 +60,8 @@ function getStatus() {
 
             switch(VA_ECMO) {
                 case true:
-                    return status = 1;
+                    if(VA_ECMO_7D) {status = 3}
+                    else {status = 1}
                 
                 case false:
                     break;
@@ -138,25 +139,113 @@ function getStatus() {
                     break;
             }
 
+
         case('durable'):
-        // Status 3-6 classification
+        //Status 3 classification
 
-            // switch() {
+            switch(LVAD) {
+                case true:
+                    case(Hemolysis):
+                        return status = 3;
+                    case (PurmpThrombosis):
+                        return status = 3;
+                    case (RightHeartFailure):
+                        return status = 3;
+                    case (DeviceInfection):
+                        return status = 3;
+                    case (AortInsuff):
+                        return status = 3;
+                    case (ICD_Shock):
+                        return status = 3;
+                    case (MucosalBleeding):
+                        return status = 3;           
                 
-            // }
+                case false:
+                    break; 
+            }
+
+            switch(TAH) {
+                case true:
+                    return status = 3;
+                    
+                case false:
+                    break;
+            }
+
+            switch(D_BIVAD) {
+                case true:
+                    return status = 3;
+                    
+                case false:
+                    break;
+            }
+
+
+        case('other'):
+        //Status 4-6 classification
         
-        // case('inotrope'):
-        // // Status 4-6 classification
+            switch(D_LVAD) {
+                case true:
+                    return status = 4;
+                    
+                case false:
+                    break;
+            }
 
+            switch(INO_wo_Hemo) {
+                case true:
+                    return status = 4;
+                    
+                case false:
+                    break;
+            }
 
+            switch(CongHD) {
+                case true:
+                    return status = 4;
+                    
+                case false:
+                    break;
+            }
 
+            switch(AmylHypReCard) {
+                case true:
+                    return status = 4;
+                    
+                case false:
+                    break;
+            }
+
+            switch(HeartReTP) {
+                case true:
+                    return status = 4;
+                    
+                case false:
+                    break;
+            }
+
+            switch(Waitlisted) {
+                case true:
+                    return status = 5;
+                    
+                case false:
+                    break;
+            }
+
+            switch(TP_Candidate) {
+                case true:
+                    return status = 6;
+                    
+                case false:
+                    break;
+            }
+        
+        default:
+            return status = 6;
 
     }
-
-
-
     
-    return status;
+    return status = 6;
 }
 
 
