@@ -21,6 +21,9 @@ const Navbar = () => {
           <NavLink to='/checklist' activeStyle>
             Checklist
           </NavLink>
+          <NavLink to='/ImageUpload' activeStyle>
+            Lung-Xray
+          </NavLink>
         </NavMenu>
         <NavBtn>
           <NavBtnLink to='/'>Sign In</NavBtnLink>

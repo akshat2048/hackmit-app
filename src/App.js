@@ -5,15 +5,18 @@ import Checklist from './Checklist';
 import SignIn from './SignIn';
 import SignUp from './SignUp';
 import Navbar from './Navbar';
+import UploadAndDisplayImage from './ImageUpload';
 
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 function App() {
   return (
+    
     <div className="App">
       <Router>
       <Navbar />
       <Switch>
+
         <Route exact path="/">
           <SignIn />
         </Route>
@@ -22,6 +25,9 @@ function App() {
         </Route>
         <Route path="/checklist">
           <Checklist />
+        </Route>
+        <Route path ="/ImageUpload">
+          <UploadAndDisplayImage />
         </Route>
         <Route path="/SignUp">
           <SignUp />
